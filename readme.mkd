@@ -1,0 +1,3 @@
+# Crawler para busca de dados de produtos nauticos: Mercado Livre e OLX
+
+Este é um projeto para busca de dados da categoria nautica, para construção de um pipeline END-TO-END.
