@@ -24,7 +24,7 @@ def parse_boat(boat_html: Tag):
     }
 
 def persist(boats_dicts: list[dict]):
-    with open(f'./data/parsed/{uuid.uuid1()}.json', 'w', encoding='utf8') as file_json:
+    with open(f'./data/parsed/list/{uuid.uuid1()}.json', 'w', encoding='utf8') as file_json:
         json.dump(boats_dicts, file_json, ensure_ascii=False)
         file_json.close()
 
@@ -47,7 +47,7 @@ for html_content in html_pages:
     for boat in boats:
         boats_dicts.append(parse_boat(boat))
     persist(boats_dicts)
-    #os.remove(file_page_full_path)
+    os.remove(file_page_full_path)
 
 
     
